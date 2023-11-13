@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "IBM Plex Sans", -apple-system, BilinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    color: #9da8b7;
+}
+
+body, html {
+    height: 100%;
+}
+
+#chat img {
+    display: block;
+    max-width: 60%;
+    padding: 20px;
+}
+
+.message > div {
+    cursor: pointer;
+}
+
+.popover {
+    position: absolute;
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    background: #333333aa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+}
+
+.popover::after {
+    content: "×";
+    font-size: 30px;
+    position: absolute;
+    top: 10px;
+    right: 27px;
+    z-index: 1000;
+}
+
+#chat div.popover img {
+    padding: 0;
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+#container {
+    margin: 20px auto;
+    width: 720px;
+    background-color: #1e252d;
+    border: 1px solid #323c48;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+#header {
+    font-weight: bold;
+    width: 100%;
+    border-bottom: 1px solid #323c48;
+    color: #c1c1c1;
+    padding: 12px;
+}
+
+#chat {
+    padding: 20px;
+    flex-grow: 1;
+    height: 1px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.message {
+    overflow-wrap: break-word;
+    overflow: hidden;
+}
+
+.message-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.message .time {
+    margin-left: auto;
+}
+
+form {
+    height: 55px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid #323c48;
+    gap: 10px;
+}
+
+form input[type="file"] {
+    display: none;
+}
+
+form input {
+    transition: all 0.3s;
+    border: 1px solid #333;
+    background-color: #333;
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    color: #e5eaf2;
+}
+
+form input:focus, from button:focus {
+    outline: none;
+    border-color: #666;
+}
+
+form input::placeholder {
+    font-style: italic;
+    color: #9da8b7;
+}
+
+form label.selected::after {
+    content: "";
+    background-color: #21b321;
+    position: absolute;
+    border-radius: 9999px;
+    top: -3px;
+    right: -3px;
+    width: 10px;
+    height: 10px;
+    text-align: center;
+}
+
+form label {
+    position: relative;
+}
+
+form button, form label {
+    cursor: pointer;
+    background-color: #333;
+    border: 1px solid #323c48;
+    border-radius: 8px;
+    aspect-ratio: 1/1;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form svg {
+    fill: #9da8b7;
+}
+
+.message .username {
+    font-weight: bold;
+}
+.message .username::after {
+    content: ":";
+}
+
+body {
+    background: linear-gradient(180deg, #141A1F 0%, #102131 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 760px) {
+    #container {
+        border-radius: 0px;
+        border: none;
+        width: 100%;
+        margin: 0;
+    }
+}
+
+.color-1 {
+    color: #ff2b2b;
+}
+
+.color-2 {
+    color: #5318f5;
+}
+
+.color-3 {
+    color: #18f5a0;
+}
+
+.color-4 {
+    color: #cc26ff;
+}
+
+.color-5 {
+    color: #ff8b26;
+}
+
+.color-6 {
+    color: #ff26de;
+}
+
+.color-7 {
+    color: #ffff3b;
+}
+
+.color-8 {
+    color: #80ff3b;
+}
+
+.color-9 {
+    color: #3bfffc;
+}
+
+.color-0 {
+    color: #dedede;
+}

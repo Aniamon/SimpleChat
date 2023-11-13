@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "simplechat"
+version = "0.1.0"
+description = "Web chat app"
+authors = ["Aniamon <a28387686@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+aiohttp = {extras = ["speedups"], version = "^3.9.0"}
+jinja2 = "^3.1.2"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.11.0"
+mypy = "^1.7.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

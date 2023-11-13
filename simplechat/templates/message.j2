@@ -1,0 +1,16 @@
+<div id="messages" hx-swap-oob="beforeend">
+    <div class="message">
+        <div class="message-wrapper">
+            <span class="username color-{{color}}">{{ username }}</span>
+            {% if message %}
+            {{ message }}
+            {% endif %}
+            <span class="time">{{ time }}</span>
+        </div>
+        {% if image %}
+        <div x-data="{show: false}" x-on:click="show = !show" x-bind:class="show?'popover':''">
+        <img  src="{{ image }}">
+        <div>
+        {% endif %}
+    </div>
+</div>
