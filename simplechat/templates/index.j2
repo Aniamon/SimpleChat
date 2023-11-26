@@ -1,0 +1,22 @@
+{% extends "base.j2" %}
+
+{% block content %}
+<div id="container" hx-ext="ws" ws-connect="/ws">
+    <div id="header">
+        Online chat
+    </div>
+    <div id="chat">
+        <div id="messages">
+            <div>Messages will appear here...</div>
+        </div>
+    </div>
+    {% if username %}
+    {% include "form.j2" %}
+    {% else %}
+    <form hx-post="/login" hx-swap="outerHTML" autocomplete="off">
+        <input name="username" type="text" placeholder="What is your name?">
+        <button type="submit" style="width: 50px">Join</button>
+    </form>
+    {% endif %}
+</div>
+{% endblock %}
